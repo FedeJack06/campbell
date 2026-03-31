@@ -98,10 +98,10 @@ def read_cs_files(filename, forcedatetime=False,
                                     bycol = bycol, forcedatetime = forcedatetime, **kwargs)
 
             if filetype == 'TOB1':
-                data = read_cs_tob1(file_obj, meta, **kwargs)
+                data = read_cs_tob1(file_obj, meta, bycol=bycol, **kwargs)
 
             if filetype == 'TOB3':
-                data = read_cs_tob3(file_obj, meta, quiet = quiet, **kwargs)
+                data = read_cs_tob3(file_obj, meta, quiet = quiet, bycol=bycol, **kwargs)
                 # have to insert the timestamp and recordnumber into the meta
                 meta[2].insert(0, 'RECORD'), meta[2].insert(0, 'TIMESTAMP')
 
