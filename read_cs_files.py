@@ -27,7 +27,7 @@ def read_cs_formats(csformat):
     knownformats = {'FP2': '>H', 'IEEE4': 'f', 'IEEE4B': '>f',
                     'UINT2': '>H', 'INT4': '>i', 'UINT4': '>L',
                     'String': 's', 'Boolean': '?', 'Bool8': '8?',
-                    'LONG': 'l', 'ULONG': '>L'}
+                    'LONG': 'l', 'ULONG': '>L', 'BOOL4': 'i'}
     for _ in csformat:
         if _.startswith('ASCII'):
             n_string = _.replace(')', '')
